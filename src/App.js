@@ -1,29 +1,21 @@
-// import React from "react";
-// import Home from "./components/Home";
-// import House from "./components/House";
-// import Map from "./Map"
-// import { mock } from "./Mock/mock"
-
-
-// import {Home} from "./components/Home";
+import React from "react";
+import SimpleCom from "./SimpleCom";
+import StyleComponent from "./StyleCom/StyleComponent";
 
 function App() {
-
+  const [state, setState] = useState("");
+  const onShow = () => {
+  setState("passed")
+  };
+  const onRegister = () => {};
   return (
-    <div>
-      {/* <Home />
-      <House />
-      <useState /> */}
-      {/* <Map values={mock} /> */}
-      
+    <Container>
+      {/* <SimpleCom value={"hello"}>
+        <h3>birnima</h3>
 
-      
-
-
-    </div>
-  )
+      </SimpleCom> */}
+    </Container>
+  );
 }
 
-export default App
-
-
+export default App;
