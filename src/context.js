@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Taom= createContext(;)
+const Taom= createContext()
 
 function TaomProvider({children}) {
     const [data, setData]=useState([
