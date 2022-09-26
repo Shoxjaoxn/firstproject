@@ -5,7 +5,7 @@ const Taom= createContext()
 function TaomProvider({children}) {
     const [data, setData]=useState([
         {id:1,name:"nazarboy"},
-        {id:2,name:"nazarboy"},
+        {id:2,name:"nazaxasrboy"},
         {id:3,name:"nazarboy"},
         {id:4,name:"nazarboy"},
     ])
