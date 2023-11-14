@@ -2,13 +2,24 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+
+}
+body {
+    background: #170550;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .navbar{
     width: 100%;
     height: 85px;
-    flex-shrink: 0;
     background: #170550;
     display: flex;
+    justify-content: center;
     align-items: center;
     position: fixed;
     z-index: 15;
@@ -49,11 +60,16 @@
 .btn:hover{
     cursor: pointer;
 }
-.block1{
+.container {
+    width: 100%;
+    display: flex;
+    background: #31065A;
+    justify-content: center;
+}
+.inner-container{
     width: 1440px;
     height: 776px;
     flex-shrink: 0;
-    background: #31065A;
     display: flex;
 }
 .text{
@@ -139,6 +155,83 @@
 .bnr-img{
     margin-right: 174px;
     width: 577px;
-height: 683px;
+    height: 683px;
 
+}
+
+.container2{
+    width: 1440px;
+    height: 800px;
+}
+.cont-text{
+    color: #FFF;
+    font-family: Exo 2;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 42%;
+    margin-top: 66px;
+
+    
+}
+.cont-text span{
+    color: #F86F03;
+}
+.inner-cont2 img{
+    width: 360px;
+    height: 410px;
+    border-radius: 15px;
+    margin-left: 153px;
+    margin-top: 170px;
+}
+.cont2-text1{
+    color: #FFF;
+    font-family: Exo 2;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 123px;
+    margin-top: 169px;
+}
+.inner-cont2{
+    display: flex;
+
+}
+.cont2-text2{
+    color: #FFF;
+    font-family: Exo 2;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 123px;
+    margin-top: 39px;
+
+}
+.cont2-text3{
+    color: #FFF;
+    font-family: Exo 2;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 123px;
+    margin-top: 39px;
+}
+.cont2-btn{
+    width: 177px;
+    height: 40px;
+    border-radius: 20px;
+    background: #FFF;
+    border: none;
+    margin-left: 123px;
+    margin-top: 67px;
+
+
+}
+.cont2-btn:hover{
+        background-color: gray;
+        cursor: pointer;
 }
