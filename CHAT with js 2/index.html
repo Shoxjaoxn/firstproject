@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+     .box {
+        width: 100%;
+        height: 120px;
+        border: 1px solid red;
+        margin: 10px;
+     }
+    </style>
+</head>
+<body>
+    <h1>TELEGRAMM</h1>
+    <div id="text">------GROUP------</div>
+    <div id="list"></div>
+    <input id="inp" type="space">
+    <button onclick="add()">CLICK</button>
+        <script>
+
+       
+       function add(){
+           let new_ms = document.getElementById("inp").value;
+           let new_el = document.createElement("div")
+           new_el.classList.add("box")
+           new_el.innerText = new_ms
+            document.getElementById("list").appendChild(new_el);
+
+           document.getElementById("inp").value = ""
+           
+           
+           
+          
+        }
+        
+        
+    </script>
+    
+</body>
+</html>
