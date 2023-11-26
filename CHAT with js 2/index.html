@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
 
      body{
         background-image: url(img/pattern-monochrome-telegram-logo-cats-hd-wallpaper-preview.jpg);
         text-align: center;
         justify-content: center;
-
-
-
-
      }
+
+     *:focus {
+        outline: none;
+    }
      #text{
 color: rgb(0, 255, 200);
      }
@@ -26,6 +27,8 @@ color: rgb(0, 255, 200);
         text-align: center;
         margin-left: 500px;
         background-image: url(img/1f135a074a169f90e5.jpeg);
+        border-radius: 40px;
+
         
 
 
@@ -44,39 +47,40 @@ color: rgb(0, 255, 200);
         margin-right: 155px;
 
      }
+     #inp{
+        border-radius: 100px;
+        border-radius: none;
+
+    }
+    button{
+        border-radius: 50px;
+        background-color: gray;
+
+    }
+    button:hover{
+        background-color: gainsboro;
+        cursor: pointer;
+
+    }
+    .error{
+        border: 1px solid red;
+    }
     </style>
 </head>
 <body>
-    <div class="Main">
-        <h1>CHAT</h1>
+    <div data-aos="fade-up"
+    data-aos-anchor-placement="top-center" class="Main">
+        <h1 >CHAT</h1>
         <div id="text">------GROUP------</div>
         <div class="chat_list">
             <div id="list" style="color: rgb(255, 255, 255);"></div>
         </div>
 
-        <input id="inp" type="space">
-        <button onclick="add()">CLICK</button>
+        <input id="inp" placeholder="USER=>" type="space">
+        <button class="send">CLICK</button>
     </div>
-
-        <script>
-
-       
-       function add(){
-           let new_ms = document.getElementById("inp").value;
-           let new_el = document.createElement("div")
-           new_el.classList.add("box")
-           new_el.innerText = new_ms
-            document.getElementById("list").appendChild(new_el);
-           document.getElementById("inp").value = " "
-           document.getElementById("inp").value = "USER=>"
-           
-           
-           
-          
-        }
-        
-        
-    </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="js/index.js"></script>
     
 </body>
 </html>
