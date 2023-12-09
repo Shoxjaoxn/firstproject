@@ -8,7 +8,7 @@ const newData = {
     text: document.getElementById("inp").value
   };
   
-  firebase.database().ref('/sms').set(newData)
+  firebase.database().ref('/sms').push().set(newData)
     .then(() => {
       console.log('Data successfully written!');
     })
@@ -94,7 +94,8 @@ const firebaseConfig = {
     .then((snapshot) => {
     const data = snapshot.val();
     console.log(data); 
-    setMassages(data.text, data.username)// Use your data here
+    
+    // setMassages(data.text, data.username)// Use your data here
     })
   .catch((error) => {
     console.error(error);
