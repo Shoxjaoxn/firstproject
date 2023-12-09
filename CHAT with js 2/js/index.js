@@ -4,22 +4,27 @@ document.getElementsByClassName("send")[0].onclick = () => add()
 const add = () => {
     let btn = document.createElement("BUTTON")
     let btn_edit = document.createElement("BUTTON")
+    let name = document.createElement("p")
     btn_edit.innerText = "edit"
     btn_edit.classList.add("edit")
     btn.innerText = "delete"
     btn.classList.add("delete")
-
     btn.onclick = () => delete_element(event)
-
     btn_edit.onclick = () => edit(event)
    let new_ms = document.getElementById("inp").value;
    let new_el = document.createElement("div")
+   
    new_el.classList.add("box")
-   new_el.innerHTML = `<p> ${new_ms} </p>`
+   name.innerText = localStorage.getItem("name")
+   new_el.appendChild(name)
+   new_el.innerHTML = new_el.innerHTML +  `<p> ${new_ms} </p>`
+   
    new_el.appendChild(btn)
    new_el.appendChild(btn_edit)
    document.getElementById("list").appendChild(new_el);
    document.getElementById("inp").value = ""
+
+   
 }
  
 const edit = (event) => {
@@ -46,7 +51,8 @@ document.getElementById("inp").addEventListener("input", (event)=> {
         document.getElementById("inp").classList.remove("error")
     }
 
-})
+})  
+
 
 
 AOS.init();

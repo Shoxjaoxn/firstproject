@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REGISTER_WINDOW</title>
     <link rel="stylesheet" href="index.html">
+    
 </head>
 <style>
     body{
@@ -20,7 +21,7 @@
 
     .register{
         border-radius: 20px;
-        background-image: url(img/background-chat-vk-65.jpg.crdownload);
+        background-color: gray;
         width: 550px;
         height: 300px;
         margin-left: 390px;
@@ -44,14 +45,23 @@
 <body>
     <div class="register">
         <h1 class="reg" style="color: black;">Register:</h1>
-        <input class="inp" placeholder="Your NickName:" type="text">
-        <a href="index.html"><button class="btn" style="color: white;">DONE</button></a>
+        <input class="inp" id="reg_inp" placeholder="Your NickName:" type="text">
+        <button id="reg_btn" class="btn" style="color: white;">DONE</button>
         
         
     </div>
-    <script>
-        document.getElementsByClassName("inp").value = document.getElementById("inp").value
+<script>
+    document.getElementById("reg_btn").onclick = () => {
+        let name = document.getElementById("reg_inp").value
 
+
+        localStorage.setItem("name", name)
+        location.href = "index.html"
+
+        
+
+        
+    }
 
 
 
