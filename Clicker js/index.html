@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple clicker</title>
+    <style>
+        #main{
+            margin-left: 600px;
+            width: 100px;
+            height: 100px;
+        }
+        #coin{
+            width: auto;
+            height: 100px;
+            margin-top:78px;
+        }
+        #btn{
+            width: 100px;
+            height: 50px;
+            border-radius: 50px;
+            border: none;
+            background-color: orange;
+            color: black;
+            border: 2px solid black;
+
+        }
+        #btn:hover{
+            cursor: pointer;
+            background-color: yellow;
+
+        }
+        #count{
+            font-size: 100px;
+
+        }
+        #count_div{
+            display: flex;
+        }
+        body{
+            background-image: url(img/background.jpg);
+        }
+        .btns{
+            display: flex;
+            gap: 30px;
+        }
+        #clear_btn{
+            width: 100px;
+            height: 50px;
+            border-radius: 50px;
+            border: none;
+            background-color: red;
+            color: white;
+            border: 2px solid black;
+        }
+        #clear_:hover{
+            cursor: pointer;
+            background-color: black;
+        }
+
+
+
+
+
+        
+        
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="main">
+        <div id="count_div">
+            <h1 id="count">0</h1>
+            <img id="coin" src="img/монета-removebg-preview.png" alt="">
+        </div>
+    <div class="btns">
+        <button id="btn">Click</button>
+        <button id="clear_btn">Clear</button>
+
+    </div>
+        
+        
+    </div>
+    <audio  id="audio" src="audio/Sound_19349.mp3"></audio>
+    <audio  id="remove_audio" src="audio/error-126627.mp3"></audio>
+
+<script>
+        document.getElementById("btn").onclick =  () => {countFunction()};
+        let count = 1
+        function countFunction() {
+            document.getElementById("audio").play()
+            document.getElementById("count").innerText = count
+            count++  
+        }
+        document.getElementById("clear_btn").onclick = () => {removeFunction()}
+        let remove = 0
+        function removeFunction() {
+            document.getElementById("count").innerText = remove
+            document.getElementById("remove_audio").play()
+        }
+    </script>
+
+    
+</body>
+</html>
